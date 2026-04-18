@@ -1,0 +1,59 @@
+.activity-container {
+  width: 100%;
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+.notification-item, .activity-item, .contact-item {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.notification-item:hover, .activity-item:hover, .contact-item:hover {
+  background-color: var(--hover-color);
+}
+
+.extra-small {
+  font-size: 0.7rem;
+}
+
+.icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  background-color: #F7F9FB !important;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-item {
+  position: relative;
+}
+
+.activity-line {
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: -15px;
+  width: 1px;
+  background-color: var(--border-color);
+  z-index: 0;
+}
+
+.activity-item:last-child .activity-line {
+  display: none;
+}

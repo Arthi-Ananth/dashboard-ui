@@ -1,0 +1,81 @@
+.best-selling-section {
+  padding: 0 4px;
+}
+
+.product-card {
+  height: 100%;
+  border-radius: 8px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.image-wrapper {
+  background-color: #E2E2E2;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  opacity: 0.8;
+  max-width: 100px;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: #00D1B2;
+  color: white;
+  padding: 24px 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
+  z-index: 2;
+}
+
+.product-title {
+  min-height: 40px;
+  color: #1C1C1C;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.text-brand {
+  color: #7070FF;
+  font-weight: 700;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #F3EFFF;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: #7070FF;
+  transition: all 0.2s ease;
+}
+
+.carousel-nav.prev { left: -40px; }
+.carousel-nav.next { right: -40px; }
+
+.carousel-nav:hover {
+  background-color: #7070FF;
+  color: white;
+}
+
+.fs-xs {
+  font-size: 0.7rem;
+}

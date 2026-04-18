@@ -1,0 +1,40 @@
+.header {
+  height: 64px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.search-container {
+  background-color: var(--hover-color);
+  border-radius: 8px;
+  padding: 0 8px;
+  min-width: 180px;
+}
+
+.command-key {
+  font-size: 0.75rem;
+  background-color: rgba(0,0,0,0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  opacity: 0.3;
+}
+
+.breadcrumb-item {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.breadcrumb-item.active {
+  color: var(--text-primary);
+}
+
+.btn-link:hover {
+  color: var(--brand-color) !important;
+}

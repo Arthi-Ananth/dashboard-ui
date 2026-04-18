@@ -1,0 +1,23 @@
+<aside class="sidebar">
+  <div class="sidebar-header px-4 py-4">
+    <div class="logo d-flex align-items-center">
+      <img src="https://ui-avatars.com/api/?name=Bye+Wind&background=random" class="rounded-circle me-2" width="28" height="28" alt="">
+      <span class="fw-bold fs-6">ByeWind</span>
+    </div>
+  </div>
+
+  <div class="sidebar-content">
+    <div *ngFor="let section of menuItems" class="menu-section mb-4">
+      <p class="section-title px-4 text-muted fw-normal small mb-2 opacity-50">{{ section.section }}</p>
+      <ul class="nav flex-column">
+        <li class="nav-item px-2" *ngFor="let item of section.items">
+          <a class="nav-link d-flex align-items-center py-2 px-3 rounded-3" [class.active]="item.active" href="#">
+            <i [class]="item.icon + ' me-3'"></i>
+            <span>{{ item.name }}</span>
+            <i *ngIf="item.name === 'eCommerce' || item.name === 'Projects'" class="bi bi-chevron-right ms-auto small opacity-50"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>

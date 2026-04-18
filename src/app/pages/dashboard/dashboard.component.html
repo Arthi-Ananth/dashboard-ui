@@ -1,0 +1,87 @@
+<app-header></app-header>
+
+<div class="dashboard-content-p mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4 px-4">
+    <h5 class="fw-bold mb-0">Overview</h5>
+    <div class="dropdown">
+      <button class="btn btn-sm bg-white border dropdown-toggle opacity-75 shadow-none" type="button">
+        Today
+      </button>
+    </div>
+  </div>
+
+  <!-- Stat Cards Row -->
+  <div class="px-4">
+    <app-dashboard-cards></app-dashboard-cards>
+  </div>
+
+  <div class="row mt-4 px-4">
+    <!-- Main Chart Section -->
+    <div class="col-xl-9 mb-4">
+      <app-charts></app-charts>
+    </div>
+    
+    <!-- Traffic Side Panel -->
+    <div class="col-xl-3 mb-4">
+      <div class="card h-100 border-0 p-4">
+        <h6 class="fw-bold mb-4">Traffic by Website</h6>
+        <div class="traffic-list">
+          <div class="traffic-item mb-4" *ngFor="let site of [
+            { name: 'Google', width: '70%'}, 
+            { name: 'YouTube', width: '45%'}, 
+            { name: 'Instagram', width: '60%'}, 
+            { name: 'Pinterest', width: '30%'}, 
+            { name: 'Facebook', width: '50%'}, 
+            { name: 'Twitter', width: '35%'}
+          ]">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="small fw-medium" style="width: 70px;">{{ site.name }}</span>
+              <div class="progress flex-grow-1 mx-2" style="height: 2px;">
+                <div class="progress-bar bg-dark" [style.width]="site.width"></div>
+              </div>
+              <span class="small text-muted" style="width: 30px; text-align: right;">---</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row px-4">
+    <!-- Customer Reviews -->
+    <div class="col-lg-6 mb-4">
+      <app-customer-reviews></app-customer-reviews>
+    </div>
+    
+    <!-- Spendings -->
+    <div class="col-lg-6 mb-4">
+      <app-spending-chart></app-spending-chart>
+    </div>
+  </div>
+
+  <div class="row px-4">
+    <!-- Tasks -->
+    <div class="col-lg-6 mb-4">
+      <app-tasks></app-tasks>
+    </div>
+
+    <!-- Conversations -->
+    <div class="col-lg-6 mb-4">
+      <app-recent-conversations></app-recent-conversations>
+    </div>
+  </div>
+
+  <div class="row px-4">
+    <!-- Best Sellers -->
+    <div class="col-12 mb-4">
+      <app-best-selling-products></app-best-selling-products>
+    </div>
+  </div>
+
+  <div class="row mt-2 px-4 pb-4">
+    <!-- Products Table -->
+    <div class="col-12">
+      <app-tables></app-tables>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="activity-container">
+  <!-- Notifications -->
+  <div class="panel-section px-4 py-4">
+    <h6 class="fw-bold mb-3 fs-7">Notifications</h6>
+    <div class="notification-item d-flex mb-3" *ngFor="let item of notifications">
+      <div class="icon-circle bg-light me-3">
+        <i [class]="item.icon"></i>
+      </div>
+      <div>
+        <p class="small fw-medium mb-0 text-truncate" style="max-width: 180px;">{{ item.title }}</p>
+        <span class="text-muted extra-small">{{ item.time }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activities -->
+  <div class="panel-section px-4 py-2">
+    <h6 class="fw-bold mb-3 fs-7">Activities</h6>
+    <div class="activity-item d-flex mb-3" *ngFor="let item of activities">
+      <div class="activity-line"></div>
+      <div class="user-avatar bg-info-subtle me-3">
+        <img [src]="'https://ui-avatars.com/api/?name=' + item.user + '&background=random'" class="rounded-circle" width="24" height="24">
+      </div>
+      <div>
+        <p class="small fw-medium mb-0 text-truncate" style="max-width: 180px;">{{ item.title }}</p>
+        <span class="text-muted extra-small">{{ item.time }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacts -->
+  <div class="panel-section px-4 py-4 mt-2">
+    <h6 class="fw-bold mb-3 fs-7">Recent Contacts</h6>
+    <div class="contact-item d-flex align-items-center mb-3" *ngFor="let contact of contacts">
+      <img [src]="'https://ui-avatars.com/api/?name=' + contact.name + '&background=random'" class="rounded-circle me-3" width="24" height="24">
+      <span class="small fw-medium">{{ contact.name }}</span>
+    </div>
+  </div>
+</div>

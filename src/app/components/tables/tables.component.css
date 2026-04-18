@@ -1,0 +1,26 @@
+.table thead th {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #F1F3F5;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table td, .table th {
+  padding: 1rem 0.5rem;
+}
+
+.status-purple { background-color: #E7E4FF; color: #7B61FF; }
+.status-green { background-color: #E2F5ED; color: #4AA785; }
+.status-blue { background-color: #E5F3FF; color: #007AFF; }
+.status-orange { background-color: #FEF6E6; color: #FF9500; }
+.status-gray { background-color: #F1F3F5; color: #949494; }
+
+.badge {
+  font-size: 0.75rem;
+}

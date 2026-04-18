@@ -1,0 +1,35 @@
+<div class="best-selling-section mt-5 position-relative">
+  <h6 class="fw-bold mb-4">Best Selling Product</h6>
+  
+  <!-- Carousel Navigation -->
+  <div class="carousel-nav prev">
+    <i class="bi bi-arrow-left"></i>
+  </div>
+  <div class="carousel-nav next">
+    <i class="bi bi-arrow-right"></i>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card p-0 border-0 product-card bg-white shadow-sm">
+        <div class="image-wrapper position-relative">
+          <div *ngIf="product.onSale" class="sale-badge">Sale</div>
+          <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+             <!-- Placeholder for product image as per Figma -->
+             <div style="width: 120px; height: 120px; background: #ccc;"></div>
+          </div>
+        </div>
+        <div class="card-body p-4 text-center">
+          <p class="product-title mb-3">{{ product.name }}</p>
+          <div class="price-container d-flex align-items-center justify-content-center gap-2 mb-2">
+            <span class="text-muted text-decoration-line-through small">{{ product.oldPrice }}</span>
+            <span class="text-brand">{{ product.newPrice }}</span>
+          </div>
+          <div class="stars d-flex gap-1 justify-content-center">
+            <i class="bi bi-star-fill text-warning fs-xs" *ngFor="let s of [1,2,3,4,5]; let i = index" [class.opacity-25]="i >= product.rating"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

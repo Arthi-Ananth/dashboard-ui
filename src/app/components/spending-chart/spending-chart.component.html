@@ -1,0 +1,40 @@
+<div class="card p-4 border-0 h-100 shadow-none">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex align-items-center">
+      <div class="drag-icon-box me-3">
+        <i class="bi bi-arrows-move text-muted opacity-50"></i>
+      </div>
+      <div>
+        <h6 class="fw-bold mb-0">Spendings</h6>
+        <p class="text-muted extra-small mb-0">Payments</p>
+      </div>
+    </div>
+    <button class="btn btn-link p-0 text-muted"><i class="bi bi-three-dots"></i></button>
+  </div>
+  
+  <div class="chart-container py-4" style="height: 200px;">
+    <canvas #donutChart></canvas>
+  </div>
+  
+  <div class="mt-4">
+    <div class="row g-3">
+      <div class="col-6" *ngFor="let item of [
+        { label: 'SERVER', val: '20%', color: '#1C75FF' },
+        { label: 'HOSTING', val: '40%', color: '#00D1B2' },
+        { label: 'SERVICES', val: '15%', color: '#FF9F00' },
+        { label: 'OTHERS', val: '15%', color: '#EBF1FF' }
+      ]">
+        <div class="d-flex align-items-center gap-2">
+          <div class="legend-circle" [style.border-color]="item.color" [style.background-color]="item.color"></div>
+          <span class="legend-text text-uppercase">{{ item.label }} <span class="opacity-50">({{ item.val }})</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-top pt-3 mt-4">
+      <button class="btn btn-link text-decoration-none p-0 w-100 text-center small fw-bold text-dark">
+        SEE DETAILS <i class="bi bi-chevron-right small ms-2"></i>
+      </button>
+    </div>
+  </div>
+</div>

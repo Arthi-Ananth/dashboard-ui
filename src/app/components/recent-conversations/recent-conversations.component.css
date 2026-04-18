@@ -1,0 +1,47 @@
+.message-bubble {
+  max-width: 80%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.bg-incoming {
+  background-color: #E5F1FF;
+  color: #1C1C1C;
+}
+
+.bg-outgoing {
+  background-color: #FEF5E7;
+  color: #1C1C1C;
+}
+
+.extra-small {
+  font-size: 0.65rem;
+  opacity: 0.5;
+}
+
+.message-bubble p {
+  line-height: 1.4;
+  font-size: 0.825rem;
+}
+
+.chat-container {
+  max-height: 400px;
+  overflow-y: hidden;
+}
+
+.btn-send {
+  background-color: #FF4D4D;
+  border-color: #FF4D4D;
+  color: white;
+  padding: 0px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-send:hover {
+  background-color: #e64545;
+  color: white;
+}
+
+.input-sm {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+}
