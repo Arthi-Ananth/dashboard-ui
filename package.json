@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "ng build --configuration production --base-href /dashboard-ui/",
-    "deploy": "gh-pages -d dist/dashboard-ui/browser"
+    "deploy": "gh-pages -d dist/dashboard-ui"
   },
   "private": true,
   "dependencies": {
