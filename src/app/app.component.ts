@@ -11,5 +11,5 @@ import { ActivityComponent } from './components/activity/activity.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'figma-dashboard';
+  title = 'dashboard-ui';
 }

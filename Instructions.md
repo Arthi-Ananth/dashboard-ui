@@ -17,7 +17,7 @@ This project is a high-fidelity recreation of the provided Figma dashboard desig
 ## How to Run the Project
 
 1. **Clone or Download** the project folder.
-2. **Open Terminal** in the `figma-dashboard` directory.
+2. **Open Terminal** in the `dashboard-ui` directory.
 3. **Install Dependencies**:
    ```bash
    npm install

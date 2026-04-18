@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "figma-dashboard": {
+    "dashboard-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/figma-dashboard",
+            "outputPath": "dist/dashboard-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "figma-dashboard:build:production"
+              "buildTarget": "dashboard-ui:build:production"
             },
             "development": {
-              "buildTarget": "figma-dashboard:build:development"
+              "buildTarget": "dashboard-ui:build:development"
             }
           },
           "defaultConfiguration": "development"

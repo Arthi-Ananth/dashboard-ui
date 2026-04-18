@@ -1,5 +1,5 @@
 {
-  "name": "figma-dashboard",
+  "name": "dashboard-ui",
   "version": "0.0.0",
   "homepage": "https://Arthi-Ananth.github.io/dashboard-ui",
   "scripts": {
@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "ng build --configuration production",
-    "deploy": "gh-pages -d dist/figma-dashboard"
+    "deploy": "gh-pages -d dist/dashboard-ui"
   },
   "private": true,
   "dependencies": {
